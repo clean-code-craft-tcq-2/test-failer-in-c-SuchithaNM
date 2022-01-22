@@ -14,11 +14,11 @@ int printColorMap() {
     }
     return i * j;
 }
-void testColourMapping(int expectedPairNumber , int expectedMajor, int expectedMinor)
+void testColourMapping(int expectedPairNumber , int expectedMajorColorId, int expectedMinorColorId)
 {
     //assert(expectedPairNumber == 0);
-    assert(majorColor == expectedMajor);
-    assert(minorColor == expectedMinor);
+    assert(majorColor == expectedMajorColorId);
+    assert(minorColor == expectedMinorColorId);
 }
 int main() {
     int result = printColorMap();
