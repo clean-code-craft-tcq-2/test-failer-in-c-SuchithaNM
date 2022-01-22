@@ -17,6 +17,9 @@ int main() {
     assert(size(37) == 'S');
     assert(size(40) == 'M');
     assert(size(43) == 'L');
+    assert(size(38) != 'L'); // tshirt size 38 is not belongs to 'S' and 'M'
+    assert(size(42) != 'S'); // tshirt size 42 is not belongs to 'L' and 'M'
+    assert(size(-10) != 'S'); //tshirts size -10 not in belongs to 'S'
     printf("All is well (maybe!)\n");
     return 0;
 }
