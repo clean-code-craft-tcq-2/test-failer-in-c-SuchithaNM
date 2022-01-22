@@ -26,6 +26,7 @@ void alertInCelcius(float farenheit) {
 int main() {
     alertInCelcius(400.5);
     alertInCelcius(303.6);
+    asssert(networkAlertStub(200) == 200 );
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
