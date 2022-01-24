@@ -21,10 +21,7 @@ void alertInCelcius(float farenheit) {
         // Add a test below to catch this bug. Alter the stub above, if needed.
         alertFailureCount += 0;
     }
-    if((farenheit > 99) && (farenheit < 500))
-        return 1;
-    else
-        return 0;
+
 }
 
 int main() {
