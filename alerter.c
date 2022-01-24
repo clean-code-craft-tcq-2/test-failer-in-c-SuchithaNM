@@ -31,8 +31,8 @@ int main() {
     alertInCelcius(400.5);
     alertInCelcius(303.6);
     assert(alertFailureCount == 1);
-    asssert(networkAlertStub(200) == 1 );
-    asssert(networkAlertStub(500) == 1 );
+    assert(networkAlertStub(200) == 1 );
+    assert(networkAlertStub(500) == 1 );
     assert(alertFailureCount == 2);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
