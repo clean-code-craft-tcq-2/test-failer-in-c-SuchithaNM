@@ -9,10 +9,15 @@ int printColorMap() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
+            printColorMapTable( (i * 5 + j),majorColor[i], minorColor[i]));
+           // printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
         }
     }
     return i * j;
+}
+
+void printColorMapTable(int pairNumber, const char *majorColor, const char *minorColor ) {
+	printf("%d | %s | %s\n", pairNumber, majorColor, minorColor);
 }
 
 int main() {
