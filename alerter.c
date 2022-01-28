@@ -1,15 +1,25 @@
 #include <stdio.h>
 #include <assert.h>
 
+#define MAX_CELCIUS 45
 int alertFailureCount = 0;
 
+
 int networkAlertStub(float celcius) {
-    printf("ALERT: Temperature is %.1f celcius.\n", celcius);
-    // Return 200 for ok
-    // Return 500 for not-ok
-    // stub always succeeds and returns 200
-    return 200;
+    if( celcius < MAX_CELCIUS )
+    {
+        printf("ALERT: Temperature is %.1f celcius.\n", celcius);
+        // Return 200 for ok
+        // Return 500 for not-ok
+        // stub always succeeds and returns 200
+        return 200;
+    }
+    else
+    {
+        return 500;
+    }
 }
+//Art of separation 
 float convertingFarenhitToCelcius(float farenheit)
 {
     float celcius ;
@@ -32,11 +42,15 @@ void alertInCelcius(float farenheit)
     }
 
 }
+void test_alertInCelcius((float farenheit)
+{
+    alertInCelcius(farenheit);
+}
 
 int main() {
-    alertInCelcius(400.5);
-    alertInCelcius(303.6);
+    test_alertInCelcius(400.5);
     assert(alertFailureCount == 1);
+    test_alertInCelcius(303.6);
     assert(alertFailureCount == 2);
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
