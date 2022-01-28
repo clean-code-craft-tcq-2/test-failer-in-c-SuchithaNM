@@ -42,7 +42,7 @@ void alertInCelcius(float farenheit)
     }
 
 }
-void test_alertInCelcius((float farenheit)
+void test_alertInCelcius(float farenheit)
 {
     alertInCelcius(farenheit);
 }
