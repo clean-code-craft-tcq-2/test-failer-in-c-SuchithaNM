@@ -20,9 +20,9 @@ int main()
     assert(size(43) == 'L');
     assert(size(38) != 'L'); // tshirt size 38 is either belongs to 'S' or 'M'
     assert(size(42) != 'S'); // tshirt size 42 is either belongs to 'L' or 'M'
-    assert((size(-10) != 'S') && (size(-10) != 'M') && (size(-10) != 'L')); //tshirts size -10 not a valid size
+  /*  assert((size(-10) != 'S') && (size(-10) != 'M') && (size(-10) != 'L')); //tshirts size -10 not a valid size
     assert((size(0) != 'S') && (size(0) != 'M') && (size(0) != 'L')); //tshirts size 0 not a valid size
-    assert((size(100) != 'S') && (size(100) != 'M') && (size(100) != 'L')); //tshirts size 100 not a valid size
+    assert((size(100) != 'S') && (size(100) != 'M') && (size(100) != 'L')); //tshirts size 100 not a valid size*/
     printf("All is well (maybe!)\n");
     return 0;
 }
