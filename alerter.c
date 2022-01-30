@@ -30,7 +30,7 @@ void alertInCelcius(float farenheit, int (*fpNetworkAlert)(float))
 {
     float celcius  = convertingFarenhitToCelcius(farenheit);
     int returnCode = fpNetworkAlert(celcius);
-	printf("returnCode = %d\n", returnCode);
+
     if (returnCode != 200) 
     {
         // non-ok response is not an error! Issues happen in life!
