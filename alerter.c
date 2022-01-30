@@ -2,9 +2,7 @@
 #include <assert.h>
 #include "alerter.h"
 
-
 int alertFailureCount = 0;
-
 
 int networkAlertStub(float celcius) {
     if( celcius < MAX_CELCIUS )
