@@ -21,8 +21,8 @@ void test_envTshirtSize()
     assert(size(37) == 'S');
     assert(size(40) == 'M');
     assert(size(43) == 'L');
-    assert(size(38) != 'L'); // tshirt size 38 is either belongs to 'S' or 'M'
-    assert(size(42) != 'S'); // tshirt size 42 is either belongs to 'L' or 'M'
+    assert(size(38) != 'L'); // tshirt size 38 is belongs to 'M'
+    assert(size(42) != 'S'); // tshirt size 42 is belongs to 'L'
 
 }
 
