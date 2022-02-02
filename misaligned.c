@@ -40,8 +40,6 @@ void test_printColorMapTable(int expectedPairNumber, const char *expectedMajorCo
 
 void test_envPrintColorsConsole()
 {
- 	int result = printColorMap();
-	assert(result == 25);
 	test_printColorMapTable(0, "White", "Blue", 0 , 0 );
 	test_printColorMapTable(1, "White", "Orange", 0 , 1 );
 	test_printColorMapTable(2, "White", "Green", 0 , 2 );
@@ -70,9 +68,9 @@ void test_envPrintColorsConsole()
 
 }
 int main() {
-   
- 
-    test_envPrintColorsConsole();
-    printf("All is well (maybe!)\n");
-    return 0;
+    	int result = printColorMap();
+	assert(result == 25); 
+	test_envPrintColorsConsole();
+	printf("All is well (maybe!)\n");
+	return 0;
 }
