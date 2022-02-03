@@ -2,7 +2,6 @@
 #include <assert.h>
 #include "tshirts.h"
 
-
 char size(int cms) {
     char sizeName = '\0';
     if(cms < SMALLSIZE) {
@@ -14,7 +13,6 @@ char size(int cms) {
     }
     return sizeName;
 }
-
 
 void test_envTshirtSize()
 {
