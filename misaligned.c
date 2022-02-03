@@ -24,16 +24,14 @@ int printColorMap()
     return i * j;
 }
 
-
-
-
 void test_printColorMapTable(int expectedPairNumber, const char *expectedMajorColorName, const char *expectedMinorColorName, int majorColorIndex, int minorColorIndex )
 {
 	int pairNumber = pairNumberCalc(majorColorIndex, minorColorIndex);
 	assert(pairNumber == expectedPairNumber);
 	assert(majorColor[majorColorIndex] == expectedMajorColorName);
 	assert(minorColor[minorColorIndex] == expectedMinorColorName);
-	
+}
+
 void test_envPrintColorsConsole()
 {
 	test_printColorMapTable(0, "White", "Blue", 0 , 0 );
@@ -61,8 +59,8 @@ void test_envPrintColorsConsole()
 	test_printColorMapTable(22, "Violet", "Green", 4 , 2 );
 	test_printColorMapTable(23, "Violet", "Brown", 4 , 3 );
 	test_printColorMapTable(24, "Violet", "Slate", 4 , 4 );
-
 }
+
 int main() {
     	int result = printColorMap();
 	assert(result == 25); 
