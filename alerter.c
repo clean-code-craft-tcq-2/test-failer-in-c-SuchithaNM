@@ -54,11 +54,13 @@ void test_alertInCelcius(float farenheit)
 void test_envTempAlert(void)
 {
     test_alertInCelcius(400.5);
-    //assert(alertFailureCount == 1);
+    assert(alertFailureCount == 1);
     test_alertInCelcius(303.6);
-   // assert(alertFailureCount == 2);
+    assert(alertFailureCount == 2);
     test_alertInCelcius(200);
+    assert(alertFailureCount == 3);
     test_alertInCelcius(111.2);
+    assert(alertFailureCount == 4);
 }
 
 int main() 
