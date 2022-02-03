@@ -23,7 +23,6 @@ int printColorMap()
     }
     return i * j;
 }
-
 void test_printColorMapTable(int expectedPairNumber, const char *expectedMajorColorName, const char *expectedMinorColorName, int majorColorIndex, int minorColorIndex )
 {
 	int pairNumber = pairNumberCalc(majorColorIndex, minorColorIndex);
