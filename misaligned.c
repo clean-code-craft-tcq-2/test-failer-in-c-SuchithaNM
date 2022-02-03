@@ -30,14 +30,10 @@ int printColorMap()
 void test_printColorMapTable(int expectedPairNumber, const char *expectedMajorColorName, const char *expectedMinorColorName, int majorColorIndex, int minorColorIndex )
 {
 	int pairNumber = pairNumberCalc(majorColorIndex, minorColorIndex);
-	printf("Got pair number %d\n", pairNumber);
 	assert(pairNumber == expectedPairNumber);
 	assert(majorColor[majorColorIndex] == expectedMajorColorName);
-	printf("Major Color is : %s\t\t Expected Major Color is : %s\t\t Expected Major Color & Major Color are equal : %d\n ", majorColor[majorColorIndex],expectedMajorColorName, strcmp(majorColor[majorColorIndex], expectedMajorColorName));
 	assert(minorColor[minorColorIndex] == expectedMinorColorName);
-	printf("Minor Color is : %s\t\t Expected Minor Color is : %s\t\t Expected Minor Color & Minor color are equal : %d\n\n ",minorColor[minorColorIndex] ,expectedMinorColorName, strcmp(minorColor[minorColorIndex],expectedMinorColorName));
-}
-
+	
 void test_envPrintColorsConsole()
 {
 	test_printColorMapTable(0, "White", "Blue", 0 , 0 );
